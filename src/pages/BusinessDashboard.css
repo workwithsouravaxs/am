@@ -1,0 +1,142 @@
+/* Business Owner Dashboard Styles */
+
+.owner-header {
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.05), transparent);
+}
+
+.sidebar-biz-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar-biz-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+/* Visitor Chart Bar Graph CSS */
+.visitor-chart-card {
+  padding: 32px;
+  border-color: var(--border);
+}
+
+.chart-bar-graph {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 220px;
+  padding: 20px 10px 10px 10px;
+  border-bottom: 2px solid var(--border);
+  margin-top: 24px;
+  gap: 12px;
+}
+
+.graph-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.graph-bar-fill {
+  width: 28px;
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 4px;
+}
+
+.graph-bar-fill:hover {
+  background: linear-gradient(180deg, var(--primary-hover), var(--primary));
+  transform: scaleX(1.1);
+}
+
+.graph-tooltip-val {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0f172a;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  pointer-events: none;
+}
+
+.graph-tooltip-val::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px 4px 0;
+  border-style: solid;
+  border-color: #0f172a transparent transparent;
+}
+
+.graph-bar-fill:hover .graph-tooltip-val {
+  opacity: 1;
+  visibility: visible;
+}
+
+.graph-label-date {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Form Styles */
+.profile-edit-form,
+.add-item-form,
+.add-offer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Service Row Pickers */
+.add-item-form button,
+.add-offer-form button {
+  align-self: flex-start;
+}
+
+.error-dashboard-box {
+  padding: 120px 24px;
+}
+
+@media (max-width: 768px) {
+  .chart-bar-graph {
+    gap: 6px;
+  }
+  
+  .graph-bar-fill {
+    width: 18px;
+  }
+  
+  .graph-label-date {
+    font-size: 9px;
+  }
+}

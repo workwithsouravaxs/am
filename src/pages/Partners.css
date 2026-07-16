@@ -1,0 +1,250 @@
+/* Partners Directory Styles */
+
+.directory-section {
+  padding-top: 20px;
+}
+
+/* Filter Bar */
+.filter-bar-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.filter-search-group {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 16px 14px 48px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background-color: var(--bg-input);
+  color: var(--text-main);
+  transition: var(--transition);
+  font-size: 15px;
+}
+
+.search-input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.filter-dropdowns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.select-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 180px;
+}
+
+.select-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 12px 16px 12px 38px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background-color: var(--bg-input);
+  color: var(--text-main);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  transition: var(--transition);
+}
+
+.filter-select:focus {
+  border-color: var(--border-focus);
+}
+
+.sorting-select {
+  padding-left: 16px; /* No icon for sorting select */
+}
+
+.reset-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 46px;
+}
+
+/* Directory Header */
+.directory-header-row {
+  margin-bottom: 24px;
+}
+
+.directory-count {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Directory Cards Grid */
+.partners-grid {
+  margin-top: 10px;
+}
+
+.partner-dir-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dir-card-banner {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.dir-card-badge-plan {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.dir-card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.dir-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: -46px; /* Overlaps banner slightly */
+  position: relative;
+  z-index: 2;
+}
+
+.dir-card-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  border: 3px solid var(--bg-card);
+  box-shadow: var(--shadow-md);
+  background-color: white;
+}
+
+.dir-card-category-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  background-color: var(--primary-light);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.dir-card-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.dir-card-desc {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.dir-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.dir-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.dir-card-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dir-card-actions {
+  margin-top: 8px;
+}
+
+/* Empty State */
+.no-results-card {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-color: var(--border);
+}
+
+.no-results-icon {
+  font-size: 48px;
+}
+
+.no-results-card h3 {
+  font-size: 22px;
+}
+
+.no-results-card p {
+  max-width: 480px;
+  margin-bottom: 8px;
+}
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+  .filter-dropdowns {
+    width: 100%;
+  }
+  
+  .select-wrap {
+    width: 100%;
+    min-width: 100%;
+  }
+  
+  .reset-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,130 @@
+/* About Page Styles */
+
+.align-center {
+  align-items: center;
+}
+
+.story-content h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.story-content p {
+  color: var(--text-muted);
+  font-size: 15.5px;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.story-metrics {
+  display: flex;
+  gap: 32px;
+  margin-top: 28px;
+}
+
+.s-metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.s-val {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  font-family: 'Outfit', sans-serif;
+}
+
+.s-lbl {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Mission & Vision Cards */
+.story-graphics {
+  display: flex;
+  justify-content: center;
+}
+
+.mission-card {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px;
+}
+
+.mission-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.m-icon-wrap {
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mission-row h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.mission-row p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Values Grid */
+.values-grid {
+  margin-top: 10px;
+}
+
+.value-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 30px;
+}
+
+.value-icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-icon-color {
+  color: var(--primary);
+}
+
+.value-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.value-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .story-metrics {
+    justify-content: center;
+  }
+}
